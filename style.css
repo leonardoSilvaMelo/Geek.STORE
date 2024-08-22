@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: ubuntu;
+}
+
+
+/* HEADER */
+header{
+    padding: 10px;
+    background-color: #7C36B8;
+}
+
+.header-cima{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.barra-pesquisa{
+    align-items: center;
+    padding: 7px;
+    background-color: white;
+    border-radius: 10px;
+    border: #FFA800 solid ;
+}
+
+.barra-pesquisa input{
+    width: 15vw;
+    height: 2.1vh;
+    border: none;
+}
+
+.barra-pesquisa i{
+    color: #7C36B8;
+}
+
+.header-btn button{
+    padding: 7px;
+    border: #FFA800 solid 3px;
+    border-radius: 10px;
+    font-weight: 550;
+    background-color: white;
+    color: #7C36B8;
+}
+
+.header-btn button :hover{
+    cursor: pointer;
+}
+
+.header-btn span button{
+    background-color: #FFA800;
+    color: white;
+}
+
+.header-btn span button :hover{
+    transition: 0.9s;
+    color: #7C36B8;
+    cursor: pointer;
+}
+
+
+.catalogo{
+    padding: 5px;
+    justify-content: space-around;
+    
+}
+
+.catalogo nav ul{
+    display: flex;
+}
+
+.catalogo nav ul li{
+    margin: 0 5px;
+}
+
+.catalogo nav ul li a{
+    color: white;
+}
