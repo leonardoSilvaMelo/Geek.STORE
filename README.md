@@ -6,5 +6,12 @@ Bem-vindo à GeekStore, o seu destino definitivo para encontrar os melhores prod
 # 🌟 Sobre o Projeto
 Este site foi criado para oferecer uma experiência única de compra para fãs da cultura geek, trazendo produtos selecionados com qualidade e variedade. Hospedado no GitHub Pages, nosso objetivo é proporcionar um ambiente intuitivo e seguro para explorar e adquirir itens exclusivos.
 
-## Link do Projeto: https://leonardosilvamelo.github.io/Geek.STORE/index.html
+## Equipe:
 
+# Material Design
+
++ ## Paleta de cores:
+  Essa paleta foi escolhida pela dominancia da cor roxa, que é responsável por transmitir ao usuário a sensação de criatividade e imaginação, e ao mesmo tempo a ideia de calma e relaxamento.
+  ![Geek.STORE PALETA](/imagens/Paleta-Geek.png)
+
+## Link do Projeto: https://leonardosilvamelo.github.io/Geek.STORE/index.html
