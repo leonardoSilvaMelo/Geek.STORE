@@ -43,7 +43,7 @@ header{
 
 .barra-pesquisa input{
     width: 20vw;
-    height: 2.1vh;
+    height: 3vh;
     border: none;
 }
 
@@ -120,23 +120,19 @@ header{
 /* SECTION HERO */
 .hero{
     padding: 0 10rem 10rem 10rem 10rem;
-    background: rgb(25,25,25);
-    background: linear-gradient(20deg, rgba(25,25,25,0.9) 20%, rgba(92,10,125,0.9) 85%, rgba(252,50,91,0.8) 100%); 
+    background: rgb(95,33,149);
+    background: radial-gradient(circle, rgba(95,33,149,1) 0%, rgba(45,15,70,1) 40%, rgba(30,10,47,1) 75%);
     height: 100vh;
+
+    /* background: rgb(95,33,149);
+    background: radial-gradient(circle, rgba(95,33,149,1) 0%, rgba(30,10,47,1) 100%); */
 }
 
 
 .content{
-    padding: 0 5rem;
-    display: flex;
-    justify-content: space-between;
+    
 }
 
-.content div img{
-    width: 23rem;
-    height: auto;
-    margin-top: 2rem;
-}
 
 .hero-text{
     color: white;
