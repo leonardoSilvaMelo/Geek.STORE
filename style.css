@@ -59,7 +59,7 @@ header{
 }
 
 .header-btn a button{
-    padding: 7px;
+    padding: 8px;
     border: #FFA800 solid 2px;
     border-radius: 10px;
     font-weight: 550;
@@ -67,7 +67,7 @@ header{
     color: white;
 }
 
-.header-btn a button:hover{
+/*.header-btn a button:hover{
     transition: 0.7s;
     background: #FFA800;
     cursor: pointer;
@@ -76,24 +76,21 @@ header{
 .header-btn a:hover{
     transition: 0.9s;
     cursor: pointer;
-}
+}*/
 
-.header-btn div a button{
+.btn-cadastro{
     background-color: #FFA800;
-    border-color: #FFA800;
     color: white;
-    box-shadow: 0 0 20px #FFA800;
+    border-radius: 10px;
 }
 
-/* .header-btn div a :hover{
-    transition: 0.9s;
-    border: #7C36B8;
-    background-color: #FC325B;
+.btn-cadastro button:hover{
+    transition: 0.7s;
     cursor: pointer;
-
-    background: var(--clr);
-    box-shadow: 0 0 20px var(--clr);
-} */
+    box-shadow: 0 0 20px #FC325B;
+    background: #FC325B;
+    border-color: #FC325B;
+}
 
 
 .catalogo{
