@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: ubuntu;
+}
+
+/* fonte 2 */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+/* HEADER */
+header {
+    padding: 10px;
+    /* background-color: rgba(0, 0, 0, 0.20
+    ); */
+    /* background-color: #7C36B8; */
+    /* background-color: #5c0a7d; */
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.header img {
+    width: 5rem;
+}
+
+.barra-pesquisa {
+    align-items: center;
+    padding: 7px;
+    background-color: white;
+    border-radius: 10px;
+    border: #FFA800 solid;
+    margin-left: 6rem;
+}
+
+.barra-pesquisa input {
+    width: 20vw;
+    height: 3vh;
+    border: none;
+}
+
+.barra-pesquisa i {
+    color: #FC325B;
+}
+
+
+
+.header-btn {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-btn a button {
+    padding: 8px;
+    border: #FFA800 solid 2px;
+    border-radius: 10px;
+    font-weight: 550;
+    background-color: transparent;
+
+}
+
+.btn-login button {
+    color: white;
+}
+
+.btn-login button:hover {
+    transition: 0.7s;
+    cursor: pointer;
+    background: #FFA800;
+    color: #1e0a2f;
+}
+
+
+.btn-cadastro {
+    background-color: #FFA800;
+    border-radius: 10px;
+    color: #1e0a2f;
+}
+
+.btn-cadastro button:hover {
+    transition: 0.7s;
+    cursor: pointer;
+    box-shadow: 0 0 20px #FC325B;
+    background: #FC325B;
+    border-color: #FC325B;
+    color: white;
+}
+
+/* .catalogo {
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.catalogo nav ul {
+    display: flex;
+}
+
+.catalogo nav ul li {
+    margin: 0 5px;
+}
+
+.catalogo nav ul li a {
+    color: white;
+} */
+
+
+
+
+/* SECTION HERO */
+.hero {
+    height: 100vh;
+    padding: 0 10rem 10rem 10rem 10rem;
+    background: rgb(63, 11, 108);
+    background: radial-gradient(circle, rgba(63, 11, 108, 1) 0%, rgba(30, 10, 47, 1) 45%);
+
+    /* background: rgb(95,33,149);
+    background: radial-gradient(circle, rgba(95,33,149,1) 0%, rgba(30,10,47,1) 100%); */
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-image {
+    margin-top: -3rem;
+}
+
+.hero-text {
+    color: white;
+    padding: 2rem;
+    margin: auto 0;
+    text-align: center;
+}
+
+.hero-text h1 {
+    margin-top: -10.5rem;
+    font-size: 86px;
+    font-family: "Jersey 25";
+    font-weight: 700;
+}
+
+.color1 {
+    color: #FC325B;
+    font-family: "Jersey 25"
+}
+
+.color2 {
+    color: #FFA800;
+    font-family: "Jersey 25"
+}
+
+.btn-nextSection {
+    height: 2.5rem;
+    margin-top: 3rem;
+    cursor: pointer;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
