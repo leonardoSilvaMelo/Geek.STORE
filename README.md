@@ -8,7 +8,6 @@ Este site foi criado para oferecer uma experiência única de compra para fãs d
 
 ### Criado por: [Leonardo Silva Melo](https://github.com/leonardoSilvaMelo)
 
-# Clique para saber mais sobre o [Material Design](./Material-Design.md)
 
 
-## Link do Projeto: https://leonardosilvamelo.github.io/Geek.STORE/index.html
+## Link do Projeto (em desenvolvimento): https://leonardosilvamelo.github.io/Geek.STORE/index.html
