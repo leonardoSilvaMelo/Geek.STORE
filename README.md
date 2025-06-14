@@ -10,4 +10,4 @@ Este site foi criado para oferecer uma experiência única de compra para fãs d
 
 
 
-## Link do Projeto (em desenvolvimento): https://leonardosilvamelo.github.io/Geek.STORE/index.html
+## Link do Projeto (em desenvolvimento): 
