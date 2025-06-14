@@ -213,6 +213,12 @@ header {
     align-items: center;
 }
 
+.card-catalogo:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px #FC325B);
+}
+
 .card-catalogo img {
     width: 15rem;
     height: 10rem;
@@ -226,7 +232,7 @@ header {
 
 /*SECTION QUEM SOMOS*/
 .section-quemSomos {
-    padding: 0rem 10rem 3rem 10rem;
+    padding: 0rem 10rem 0rem 10rem;
     height: 50vh;
     background: #1e0a2f;
     color: white;
@@ -237,18 +243,22 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 4rem;
 }
 
 .container-quemSomos h2 {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
     margin-top: 0;
     color: #FC325B;
 }
 
+.quemSomos-spam {
+    color: #FFA800;
+}
+
 .container-quemSomos p {
     text-align: justify;
-    
 }
 
 .container-quemSomos img {
@@ -256,4 +266,50 @@ header {
     height: 20rem;
     border-radius: 25%;
     filter: drop-shadow(0 0 15px #FC325B);
+}
+
+
+/* Sobre Empresa*/
+.sobreEmpresa {
+    padding: 3rem 10rem 3rem 10rem;
+    height: 110vh;
+    background: #1e0a2f;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.container-divs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    margin-top: 2.5rem;
+
+    border: white solid 1px;
+    background-color: rgba(255, 255, 255, 0.050);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+}
+
+.text-cards{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-cards h3{
+    margin-bottom: 0.5rem;
+}
+
+.cards img {
+    width: 15rem;
+    height: 10rem;
+    border-radius: 5%;
 }
