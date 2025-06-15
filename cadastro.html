@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - GeekStore</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: ubuntu;
+      background: linear-gradient(135deg, #1a1a2e, #1E0A2F);
+      color: #e0e0e0;
+      padding: 5rem;
+    }
+
+    .form-container {
+      background: #ffa800;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    h2 {
+      font-family: 'Sigmar', cursive;
+      text-align: center;
+      color: #1E0A2F;
+      font-size: 3rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #1E0A2F;
+      font-size: 0.9rem;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #1E0A2F;
+      border-radius: 5px;
+      background: #fff;
+      color: #e0e0e0;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #1E0A2F;
+      box-shadow: 0 0 5px #1E0A2F;
+    }
+
+    .error {
+      border-color: #ff5555 !important;
+      box-shadow: 0 0 5px #ff5555;
+    }
+
+    .error-message {
+      color: #1E0A2F;
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+      display: none;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 1rem;
+      background: #1E0A2F;
+      color: #ffa800;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.1s;
+      margin-bottom: 1rem;
+    }
+
+    button:hover {
+      background: #ff5555;
+      color: #1E0A2F;
+      transform: scale(1.02);
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="form-container">
+    <h2>Cadastro na Geek</h2>
+    <form id="signupForm" novalidate>
+      <div class="form-group">
+        <label for="name">Nome Completo</label>
+        <input type="text" id="name" name="name" placeholder="Digite seu nome">
+        <span class="error-message" id="nameError">Por favor, insira seu nome completo.</span>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+        <span class="error-message" id="emailError">Por favor, insira um e-mail válido.</span>
+      </div>
+      <div class="form-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" placeholder="Crie uma senha">
+        <span class="error-message" id="passwordError">A senha deve ter pelo menos 8 caracteres.</span>
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefone</label>
+        <input type="tel" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX">
+        <span class="error-message" id="phoneError">Por favor, insira um telefone válido.</span>
+      </div>
+      <div class="form-group">
+        <label for="birthdate">Data de Nascimento</label>
+        <input type="date" id="birthdate" name="birthdate">
+        <span class="error-message" id="birthdateError">Por favor, selecione uma data válida.</span>
+      </div>
+      <div class="form-group">
+        <label>Interesses Geek</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="interests" value="comics"> Quadrinhos</label>
+          <label><input type="checkbox" name="interests" value="games"> Jogos</label>
+          <label><input type="checkbox" name="interests" value="movies"> Mangás/Animes</label>
+          <label><input type="checkbox" name="interests" value="collectibles"> Colecionáveis</label>
+          <label><input type="checkbox" name="interests" value="decoration"> Decorações</label>
+        </div>
+        <span class="error-message" id="interestsError">Selecione pelo menos um interesse.</span>
+      </div>
+      <button type="submit">Cadastrar</button>
+
+      <a href="/home.html" onclick="history.back()" class="btn-home">
+          <button type="button">Voltar para a página anterior</button>
+      </a>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('signupForm');
+    const inputs = {
+      name: document.getElementById('name'),
+      email: document.getElementById('email'),
+      password: document.getElementById('password'),
+      phone: document.getElementById('phone'),
+      birthdate: document.getElementById('birthdate'),
+      interests: document.querySelectorAll('input[name="interests"]')
+    };
+    const errors = {
+      name: document.getElementById('nameError'),
+      email: document.getElementById('emailError'),
+      password: document.getElementById('passwordError'),
+      phone: document.getElementById('phoneError'),
+      birthdate: document.getElementById('birthdateError'),
+      interests: document.getElementById('interestsError')
+    };
+
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+      return re.test(email);
+    }
+
+    function validatePhone(phone) {
+      const re = /^\(\d{2}\)\s?\d{4,5}-\d{4}$/;
+      return re.test(phone);
+    }
+
+    function validateBirthdate(date) {
+      const today = new Date();
+      const inputDate = new Date(date);
+      return inputDate < today && inputDate.getFullYear() > 1900;
+    }
+
+    function showError(input, errorElement, message) {
+      input.classList.add('error');
+      errorElement.style.display = 'block';
+      errorElement.textContent = message;
+    }
+
+    function clearError(input, errorElement) {
+      input.classList.remove('error');
+      errorElement.style.display = 'none';
+    }
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      let isValid = true;
+
+      // Name validation
+      if (!inputs.name.value.trim()) {
+        showError(inputs.name, errors.name, 'Por favor, insira seu nome completo.');
+        isValid = false;
+      } else {
+        clearError(inputs.name, errors.name);
+      }
+
+      // Email validation
+      if (!inputs.email.value) {
+        showError(inputs.email, errors.email, 'Por favor, insira seu e-mail.');
+        isValid = false;
+      } else if (!validateEmail(inputs.email.value)) {
+        showError(inputs.email, errors.email, 'Por favor, insira um e-mail válido.');
+        isValid = false;
+      } else {
+        clearError(inputs.email, errors.email);
+      }
+
+      // Password validation
+      if (!inputs.password.value || inputs.password.value.length < 8) {
+        showError(inputs.password, errors.password, 'A senha deve ter pelo menos 8 caracteres.');
+        isValid = false;
+      } else {
+        clearError(inputs.password, errors.password);
+      }
+
+      // Phone validation
+      if (!inputs.phone.value) {
+        showError(inputs.phone, errors.phone, 'Por favor, insira seu telefone.');
+        isValid = false;
+      } else if (!validatePhone(inputs.phone.value)) {
+        showError(inputs.phone, errors.phone, 'Por favor, insira um telefone válido.');
+        isValid = false;
+      } else {
+        clearError(inputs.phone, errors.phone);
+      }
+
+      // Birthdate validation
+      if (!inputs.birthdate.value) {
+        showError(inputs.birthdate, errors.birthdate, 'Por favor, selecione sua data de nascimento.');
+        isValid = false;
+      } else if (!validateBirthdate(inputs.birthdate.value)) {
+        showError(inputs.birthdate, errors.birthdate, 'Por favor, selecione uma data válida.');
+        isValid = false;
+      } else {
+        clearError(inputs.birthdate, errors.birthdate);
+      }
+
+      // Interests validation
+      let interestsSelected = false;
+      inputs.interests.forEach(checkbox => {
+        if (checkbox.checked) interestsSelected = true;
+      });
+      if (!interestsSelected) {
+        showError(inputs.interests[0].parentElement.parentElement, errors.interests, 'Selecione pelo menos um interesse.');
+        isValid = false;
+      } else {
+        clearError(inputs.interests[0].parentElement.parentElement, errors.interests);
+      }
+
+      if (isValid) {
+        alert('Cadastro realizado com sucesso! Bem-vindo à GeekStore!');
+        form.reset();
+      }
+    });
+
+    // Real-time validation
+    inputs.name.addEventListener('input', () => {
+      if (inputs.name.value.trim()) clearError(inputs.name, errors.name);
+    });
+    inputs.email.addEventListener('input', () => {
+      if (validateEmail(inputs.email.value)) clearError(inputs.email, errors.email);
+    });
+    inputs.password.addEventListener('input', () => {
+      if (inputs.password.value.length >= 8) clearError(inputs.password, errors.password);
+    });
+    inputs.phone.addEventListener('input', () => {
+      if (validatePhone(inputs.phone.value)) clearError(inputs.phone, errors.phone);
+    });
+    inputs.birthdate.addEventListener('input', () => {
+      if (validateBirthdate(inputs.birthdate.value)) clearError(inputs.birthdate, errors.birthdate);
+    });
+    inputs.interests.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        if (Array.from(inputs.interests).some(cb => cb.checked)) {
+          clearError(inputs.interests[0].parentElement.parentElement, errors.interests);
+        }
+      });
+    });
+
+    function fecharJanela(){
+        window.close();
+    }
+  </script>
+</body>
+</html>

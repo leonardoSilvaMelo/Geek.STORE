@@ -50,7 +50,7 @@
                             </button>
                         </a>
 
-                        <a href="" target="_blank" class="btn-cadastro">
+                        <a href="./cadastro.html" class="btn-cadastro">
                             <button>
                                 <p>Cadastre-se</p>
                             </button>
@@ -127,7 +127,8 @@
                     <h2> <span class="quemSomos-spam">Quem</span> somos?</h2>
 
                     <p>Somos uma loja especializada em produtos geek, oferecendo uma ampla gama de itens que vão desde
-                        jogos eletrônicos até colecionáveis exclusivos.<br> Nossa missão é proporcionar aos fãs da cultura
+                        jogos eletrônicos até colecionáveis exclusivos.<br> Nossa missão é proporcionar aos fãs da
+                        cultura
                         geek uma experiência de compra única e satisfatória, com produtos de alta qualidade e um
                         atendimento excepcional.</p>
                 </div>
@@ -146,47 +147,158 @@
                 <div class="cards">
 
                     <div class="text-cards">
-                        <h3>O Escritório</h3>
-    
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum reprehenderit ut molestiae
-                            libero, obcaecati nemo quo odio rem assumenda quisquam numquam maiores fugit consectetur
-                            nesciunt, autem vel eveniet id perferendis?</p>
-    
-                        </div>
-                        <img src="/imagens/image 8.png" alt="">
+                        <h3>🏢 Nossos Escritórios:</h3>
+
+                        <p>É aqui que tudo começa! Nosso espaço foi criado para inspirar criatividade e celebrar a cultura geek em cada canto. Trabalhamos em um ambiente descontraído, cercado de referências que amamos — de action figures a trilhas sonoras épicas. É desse universo que saem as ideias que chegam até você.</p>
+
+                    </div>
+                    <img src="/imagens/image 8.png" alt="">
 
                 </div>
 
                 <div class="cards">
 
                     <div class="text-cards">
-                        <h3>Nossa equipe</h3>
-    
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum reprehenderit ut molestiae
-                            libero, obcaecati nemo quo odio rem assumenda quisquam numquam maiores fugit consectetur
-                            nesciunt, autem vel eveniet id perferendis?</p>
-    
-                        </div>
-                        <img src="/imagens/image 9.png" alt="">
+                        <h3>👾 Nosso Time: Feito por Fãs, para Fãs</h3>
+
+                        <p>Somos fãs como você. Nossa equipe é formada por apaixonados por animes, games, filmes e quadrinhos. Cada membro conhece o universo geek como ninguém, e isso faz toda a diferença na hora de selecionar produtos e oferecer um atendimento que entende você de verdade.</p>
+
+                    </div>
+                    <img src="/imagens/image 9.png" alt="">
 
                 </div>
 
                 <div class="cards">
 
                     <div class="text-cards">
-                        <h3>Estoque de Produtos</h3>
-    
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta esse nihil accusantium ut ex,
-                            illo, porro vero aliquid, fugiat quos facilis. Harum quidem vel beatae itaque, expedita delectus
-                            tempora fugit?</p>
-    
-                        </div>
-                        <img src="/imagens/image 6.png" alt="">
-                        
+                        <h3>📦 Estoque e Produtos</h3>
+
+                        <p>Nosso estoque é um verdadeiro tesouro geek! Reunimos action figures, mangás, camisetas, games, HQs e itens de decoração escolhidos com cuidado. Estamos sempre atualizando nossos produtos para garantir novidades e qualidade em cada envio.</p>
+
+                    </div>
+                    <img src="/imagens/image 6.png" alt="">
+
                 </div>
 
             </div>
         </section>
+
+        <section class="formTireDuvidas">
+            <div class="card-form">
+
+                <div class="text-form">
+                    <h2>Dúvidas?</h2>
+                    <h2>Sujestões?</h2>
+                    <h2><span class="text-form-span">Conte-nos!</span></h2>
+                </div>
+
+                <div class="form-container">
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+                            <span class="error-message" id="emailError">Por favor, insira um e-mail válido.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message"
+                                placeholder="Escreva sua dúvida, dica ou comentário"></textarea>
+                            <span class="error-message" id="messageError">Por favor, insira uma mensagem.</span>
+                        </div>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <script>
+                const form = document.getElementById('contactForm');
+                const emailInput = document.getElementById('email');
+                const messageInput = document.getElementById('message');
+                const emailError = document.getElementById('emailError');
+                const messageError = document.getElementById('messageError');
+
+                function validateEmail(email) {
+                    const re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+                    return re.test(email);
+                }
+
+                function showError(input, errorElement, message) {
+                    input.classList.add('error');
+                    errorElement.style.display = 'block';
+                    errorElement.textContent = message;
+                }
+
+                function clearError(input, errorElement) {
+                    input.classList.remove('error');
+                    errorElement.style.display = 'none';
+                }
+
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    let isValid = true;
+
+                    // Email validation
+                    if (!emailInput.value) {
+                        showError(emailInput, emailError, 'Por favor, insira seu e-mail.');
+                        isValid = false;
+                    } else if (!validateEmail(emailInput.value)) {
+                        showError(emailInput, emailError, 'Por favor, insira um e-mail válido.');
+                        isValid = false;
+                    } else {
+                        clearError(emailInput, emailError);
+                    }
+
+                    // Message validation
+                    if (!messageInput.value.trim()) {
+                        showError(messageInput, messageError, 'Por favor, insira uma mensagem.');
+                        isValid = false;
+                    } else {
+                        clearError(messageInput, messageError);
+                    }
+
+                    if (isValid) {
+                        alert('Formulário enviado com sucesso!');
+                        form.reset();
+                    }
+                });
+
+                // Real-time validation for email
+                emailInput.addEventListener('input', function () {
+                    if (!emailInput.value || validateEmail(emailInput.value)) {
+                        clearError(emailInput, emailError);
+                    }
+                });
+
+                // Real-time validation for message
+                messageInput.addEventListener('input', function () {
+                    if (messageInput.value.trim()) {
+                        clearError(messageInput, messageError);
+                    }
+                });
+            </script>
+        </section>
+
+
+        <footer>
+            <!-- <hr class="footer-line"> -->
+            <div class="footer-container">
+
+                <div class="footer-text">
+                    <img src="/imagens/Geek.STORE(1).png" alt="">
+                    <p>© 2025 Geek.STORE. Todos os direitos reservados.</p>
+                </div>
+
+                <div class="footer-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+
+            </div>
+        </footer>
+
     </main>
 </body>
 
