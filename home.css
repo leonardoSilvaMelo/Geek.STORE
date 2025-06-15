@@ -408,12 +408,202 @@ footer {
     align-items: center;
 }
 
-footer img{
+footer img {
     height: 8rem;
 }
 
-.footer-icons a i{
+.footer-icons a i {
     color: #FFA800;
     font-size: 3rem;
     margin-right: 1rem;
+}
+
+
+/* RESPONSIVIDADE GERAL */
+@media screen and (max-width: 1024px) {
+    .header {
+        gap: 1rem;
+    }
+
+    .barra-pesquisa {
+        margin-left: 0;
+    }
+
+    .header-btn {
+        gap: 0.5rem;
+    }
+
+
+
+    .section-catalogo {
+        padding: 6rem 2rem;
+    }
+
+    .section-quemSomos {
+        padding: 2rem 2rem;
+    }
+
+
+
+    .container-quemSomos {
+        gap: 2rem;
+        /* text-align: center; */
+    }
+
+    .container-quemSomos p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .container-quemSomos img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .container-quemSomos h2 {
+        font-size: 4rem;
+    }
+
+
+    .container-divs {
+        margin-top: -6rem;
+    }
+
+    .text-cards p {
+        font-size: 1.2rem;
+    }
+
+
+
+
+    .formTireDuvidas {
+        padding: 2rem 6rem;
+        height: auto;
+    }
+
+    .text-form h2 {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    /*--------------------------------*/
+    .section-catalogo {
+        padding: 4rem 1rem;
+    }
+
+    .section-catalogo h2 {
+        margin-top: 3rem;
+    }
+
+    .title-catalogo {
+        font-size: 1.5rem;
+    }
+
+    .card-catalogo img {
+        width: 12rem;
+        height: 8rem;
+    }
+
+    /*-------------------------------*/
+    .section-quemSomos h2 {
+        font-size: 3rem;
+        margin-top: 0;
+    }
+
+    .section-quemSomos {
+        padding: 2rem 1rem;
+        height: auto;
+    }
+
+    .container-quemSomos {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .container-quemSomos img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .section-quemSomos p {
+        font-size: 1rem;
+        margin: auto;
+        text-align: left;
+        max-width: 500px;
+    }
+    /*-------------------------------*/
+
+    .sobreEmpresa {
+        padding: 2rem 6rem;
+        height: auto;
+    }
+    .cards {
+        padding: 1rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .cards img {
+        width: 25rem;
+        height: auto;
+    }
+   /*-------------------------------*/
+    .formTireDuvidas {
+        padding: 2rem 6rem;
+        height: auto;
+    }
+
+    .text-form {
+        font-size: 1.8rem;
+        margin-top: 3rem;
+        width: 22rem;
+    }
+
+    footer {
+        text-align: center;
+        gap: 1rem;
+    }
+
+    footer img {
+        height: 5rem;
+    }
+
+    .footer-container {
+        gap: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .barra-pesquisa input {
+        width: 100%;
+    }
+
+    .form-container {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .footer-icons a i {
+        font-size: 2rem;
+    }
 }
