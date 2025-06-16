@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #1e0a2f;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+}
+
+#form-pesquisa {
+  max-width: 500px;
+  margin: 0 auto 20px;
+  display: flex;
+  gap: 10px;
+}
+
+#form-pesquisa input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #2a1a3f;
+  color: #fff;
+}
+
+#form-pesquisa button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#form-pesquisa button:hover {
+  background: #0056b3;
+}
+
+.categoria-secao {
+  margin-bottom: 30px;
+}
+
+.categoria-secao h2 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.categoria-secao .lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.item {
+  background: #2a1a3f;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 5px;
+  margin: 0 auto 10px; /* Centraliza a imagem */
+}
+
+.item .conteudo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.item .detalhes {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.item .detalhes p {
+  margin: 5px 0;
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+.item .controles {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.item .comprar button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.item .comprar button:hover {
+  background: #218838;
+}
+
+#loading {
+  text-align: center;
+  display: none;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  #form-pesquisa {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #form-pesquisa input,
+  #form-pesquisa button {
+    width: 100%;
+  }
+  .categoria-secao .lista-produtos {
+    grid-template-columns: 1fr;
+  }
+  .item img {
+    max-width: 120px;
+  }
+  .item .controles {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .item .comprar button {
+    margin-top: 10px;
+    width: 100%;
+  }
+}

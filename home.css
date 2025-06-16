@@ -585,9 +585,95 @@ footer img {
 }
 
 
+.mobile-menu{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: #ffa800;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.nav-links-mobile{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+    width: 100%;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links-mobile li {
+    /* border-bottom: 1px solid #787272; */
+    padding-bottom: 1rem;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.nav-links-mobile li:hover{
+    transition: 0.9s;
+    color: white;
+    background-color: rgb(206, 88, 10);
+}
+
+.hamburger,
+.close {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.close {
+    margin-top: 20px;
+    margin-right: 20px;
+    display: block;
+    align-self: end;
+}
+
+.flex{
+    display: flex;
+}
+
 @media screen and (max-width: 480px) {
+
+    html{
+        /* font-size: 12px; */
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .barra-pesquisa{
+        display: none;
+    }
+
+    .header-btn {
+        display: none;
+    }
+
+    header p{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+        background-color: #ffa800;
+        width: 4rem;
+    }
+    /* Mobile Menu */
     .hero {
         padding: 2rem;
+        height: auto;
     }
 
     .hero-text h1 {
@@ -598,12 +684,60 @@ footer img {
         width: 100%;
     }
 
+
+    /** quem somos*/
+    .section-quemSomos{
+        padding: 3rem 2.5rem;
+        height: auto;
+    }
+
+    .section-quemSomos p{
+        font-size: 1.8rem;
+        margin: auto;
+        text-align: justify;
+        max-width: 100%;
+    }
+
+    /*cards*/
+
+    .sobreEmpresa {
+        padding: 2rem 2.5rem;
+        height: auto;
+    }
+
+    .container-divs {
+        margin-top: -0.5rem;
+    }
+
+    .text-cards p{
+        font-size: 1.5rem;
+    }
+
+    .cards img{
+        width: 100%;
+        height: auto;
+    }
+
+    /*form*/
+    .formTireDuvidas {
+        padding: 2rem 2rem;
+        height: auto;
+    }
+
+    .text-form h2{
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+    /*footer*/
     .form-container {
         padding: 1rem;
         max-width: 100%;
     }
 
+    
+
     .footer-icons a i {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 }

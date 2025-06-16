@@ -44,7 +44,7 @@
 
                     <div class="header-btn">
 
-                        <a href="" class="btn-login">
+                        <a href="./produtos/produtos.html" class="btn-login">
                             <button>
                                 <p>Entrar</p>
                             </button>
@@ -57,7 +57,40 @@
                         </a>
 
                     </div>
+                    <!-- DIV mobile menu -->
+                    <div class="mobile-menu" id="mobileMenu">
+
+                        <button class="close button" id="close">
+                            <i class="fa-solid fa-x" style="color: black;"></i>
+                        </button>
+
+                        <ul class="nav-links-mobile">
+                            <li>
+                                <a href="#inicio">HOME</a>
+                            </li>
+                            <li>
+                                <a href="/produtos.html">PRODUTOS</a>
+                            </li>
+                            <li>
+                                <a href="#section-catalogo">ABOUT US</a>
+                            </li>
+                            <li>
+                                <a href="#sobreEmpresa">A EMPRESA</a>
+                            </li>
+                            <li>
+                                <a href="#footer-container">CONTACTS</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <button class="hamburger" id="hamburgerButton">
+                        <i class="fas fa-bars" style="color: black;"></i>
+                    </button>
                 </div>
+
+                    <script src="https://kit.fontawesome.com/78c68c91f5.js" crossorigin="anonymous"></script>
+
 
             </header>
 
@@ -76,14 +109,14 @@
 
                 </div>
 
-                <a href="">
+                <a href="#section-catalogo" class="btn-nextSection">
                     <img src="../imagens/btn-nextSection.png" alt="Botão de próxima section" class="btn-nextSection">
                 </a>
 
             </div>
         </section>
 
-        <section class="section-catalogo">
+        <section class="section-catalogo" id="section-catalogo">
 
             <div class="title-catalogo">
                 <h2>Aqui você encontrará tudo sobre...</h2>
@@ -140,7 +173,7 @@
 
         </section>
 
-        <section class="sobreEmpresa">
+        <section class="sobreEmpresa" id="sobreEmpresa">
 
             <div class="container-divs">
 
@@ -149,7 +182,10 @@
                     <div class="text-cards">
                         <h3>🏢 Nossos Escritórios:</h3>
 
-                        <p>É aqui que tudo começa! Nosso espaço foi criado para inspirar criatividade e celebrar a cultura geek em cada canto. Trabalhamos em um ambiente descontraído, cercado de referências que amamos — de action figures a trilhas sonoras épicas. É desse universo que saem as ideias que chegam até você.</p>
+                        <p>É aqui que tudo começa! Nosso espaço foi criado para inspirar criatividade e celebrar a
+                            cultura geek em cada canto. Trabalhamos em um ambiente descontraído, cercado de referências
+                            que amamos — de action figures a trilhas sonoras épicas. É desse universo que saem as ideias
+                            que chegam até você.</p>
 
                     </div>
                     <img src="/imagens/image 8.png" alt="">
@@ -161,7 +197,9 @@
                     <div class="text-cards">
                         <h3>👾 Nosso Time: Feito por Fãs, para Fãs</h3>
 
-                        <p>Somos fãs como você. Nossa equipe é formada por apaixonados por animes, games, filmes e quadrinhos. Cada membro conhece o universo geek como ninguém, e isso faz toda a diferença na hora de selecionar produtos e oferecer um atendimento que entende você de verdade.</p>
+                        <p>Somos fãs como você. Nossa equipe é formada por apaixonados por animes, games, filmes e
+                            quadrinhos. Cada membro conhece o universo geek como ninguém, e isso faz toda a diferença na
+                            hora de selecionar produtos e oferecer um atendimento que entende você de verdade.</p>
 
                     </div>
                     <img src="/imagens/image 9.png" alt="">
@@ -173,7 +211,9 @@
                     <div class="text-cards">
                         <h3>📦 Estoque e Produtos</h3>
 
-                        <p>Nosso estoque é um verdadeiro tesouro geek! Reunimos action figures, mangás, camisetas, games, HQs e itens de decoração escolhidos com cuidado. Estamos sempre atualizando nossos produtos para garantir novidades e qualidade em cada envio.</p>
+                        <p>Nosso estoque é um verdadeiro tesouro geek! Reunimos action figures, mangás, camisetas,
+                            games, HQs e itens de decoração escolhidos com cuidado. Estamos sempre atualizando nossos
+                            produtos para garantir novidades e qualidade em cada envio.</p>
 
                     </div>
                     <img src="/imagens/image 6.png" alt="">
@@ -183,7 +223,7 @@
             </div>
         </section>
 
-        <section class="formTireDuvidas">
+        <section class="formTireDuvidas" id="formTireDuvidas">
             <div class="card-form">
 
                 <div class="text-form">
@@ -276,13 +316,36 @@
                         clearError(messageInput, messageError);
                     }
                 });
+
+
+
+
+                //recuperando a Caixa Amarela (Quando aberta o menu Hamburguer)
+                const mobileMenu = document.querySelector("#mobileMenu");
+
+                //recuperando o Botão de fechamento
+                const close = document.getElementById("close");
+
+                //recuperando o Botão de Hamburger
+                const hamburgerButton = document.getElementById("hamburgerButton");
+
+                //Adicionando o evento de escutar o click (addEventListener) do mouse sobre o botão de hamburger
+                hamburgerButton.addEventListener("click", function () {
+                    //Adicionando o classe "flex" á nossa div mobileMenu
+                    mobileMenu.classList.add("flex");
+                })
+
+                //Criamos uma função que a ouvir o click do Mouse, ele REMOVA uma Class, que está fazendo nossa caixa (Div) desaparecer, ou seja, ficar invisível.
+                close.addEventListener("click", function () {
+                    mobileMenu.classList.remove("flex");
+                })
             </script>
         </section>
 
 
         <footer>
             <!-- <hr class="footer-line"> -->
-            <div class="footer-container">
+            <div class="footer-container" id="footer-container">
 
                 <div class="footer-text">
                     <img src="/imagens/Geek.STORE(1).png" alt="">
