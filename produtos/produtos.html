@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loja Geek</title>
+  <title>Geek.STORE</title>
   <link rel="stylesheet" href="./produtos.css">
 </head>
+
 <body>
-  <h1>Loja Geek</h1>
+
+  <header>
+    <div class="header">
+      <img src="../imagens/Geek.STORE(1).png" alt="Logomarca">
+
+
+      <div class="header-btn">
+
+        <a href="../home.html" class="btn-login">
+          <button>
+            <p>Inicio</p>
+          </button>
+        </a>
+
+        <a href="../cadastro.html" class="btn-cadastro">
+          <button>
+            <p>Cadastre-se</p>
+          </button>
+        </a>
+
+      </div>
+  </header>
   <form id="form-pesquisa">
     <input type="text" id="termo-pesquisa" placeholder="Pesquisar produtos (ex: Zelda, Batman)" required>
     <button type="submit">Pesquisar</button>
   </form>
   <div id="loading">Carregando...</div>
   <div id="categorias"></div>
-  <script src="produtos.js"></script>
+  <script src="./produtos.js"></script>
 </body>
+
 </html>

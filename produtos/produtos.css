@@ -1,14 +1,66 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 2rem 7rem;
   background-color: #1e0a2f;
   color: #fff;
 }
 
-h1 {
-  text-align: center;
-  color: #fff;
+/*----------------------------------*/
+header {
+    padding: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.header img {
+    width: 5rem;
+}
+
+.header-btn {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-btn a button {
+    border: #FFA800 solid 2px;
+    border-radius: 10px;
+    font-weight: 550;
+    background-color: transparent;
+
+}
+
+.btn-login button {
+    color: white;
+}
+
+.btn-login button:hover {
+    transition: 0.7s;
+    cursor: pointer;
+    background: #FFA800;
+    color: #1e0a2f;
+}
+
+
+.btn-cadastro {
+    background-color: #FFA800;
+    border-radius: 10px;
+    color: #1e0a2f;
+}
+
+.btn-cadastro button:hover {
+    transition: 0.7s;
+    cursor: pointer;
+    box-shadow: 0 0 20px #FC325B;
+    background: #FC325B;
+    border-color: #FC325B;
+    color: white;
 }
 
 #form-pesquisa {
@@ -21,14 +73,14 @@ h1 {
 #form-pesquisa input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #FFA800;
   border-radius: 4px;
   background-color: #2a1a3f;
   color: #fff;
 }
 
 #form-pesquisa button {
-  background: #007bff;
+  background: #FFA800;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -37,7 +89,8 @@ h1 {
 }
 
 #form-pesquisa button:hover {
-  background: #0056b3;
+  background: #FC325B;
+    transition: background-color 0.3s ease;
 }
 
 .categoria-secao {
@@ -46,7 +99,8 @@ h1 {
 
 .categoria-secao h2 {
   color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: 2rem;
+  font-size: 3rem;
 }
 
 .categoria-secao .lista-produtos {
@@ -87,6 +141,11 @@ h1 {
   flex-grow: 1;
 }
 
+.item .conteudo h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
 .item .detalhes {
   text-align: left;
   flex-grow: 1;
@@ -105,18 +164,19 @@ h1 {
   margin-top: 10px;
 }
 
+
 .item .comprar button {
-  background: #28a745;
+  background: #FFA800;
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 15px 215px;
   border-radius: 3px;
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 1rem;
 }
 
 .item .comprar button:hover {
-  background: #218838;
+  background: #1e0a2f;
 }
 
 #loading {
